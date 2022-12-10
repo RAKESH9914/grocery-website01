@@ -1,0 +1,36 @@
+<html>
+<head>
+  <style>
+    body {  
+      font-family:monospace;
+
+      background-color: rgb(166, 232, 159);
+      margin-top: 190px;
+  text-align:center;
+
+    }
+  </style>
+</head>
+<body>
+<script>
+  function validate()
+{
+  var name=document.myform.name.value
+  var password=document.myform.password.value
+  if(name==null || name=="")
+  {
+       alert("usename cant be blank"); 
+		return false;
+	}
+  if(password.length<6)
+	{alert("password must be atleast six digits")
+	return false;}
+}
+</script>
+<form name="myform" action="myserver.php" method="post" onsubmit=validate() >
+username:<input type="text" name="name"> <br>
+password:<input type="text" name="password"> <br>
+<input type="submit" value="login">
+</form>
+</body>
+
